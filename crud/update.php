@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '../connection/config.php';
 if(isset($_POST['update'])){
     $ID = $_POST['Id'];
     $NAME = $_POST['name'];
@@ -9,7 +9,7 @@ if(isset($_POST['update'])){
     $CONTACT = $_POST['contact'];
 
     mysqli_query($con,"UPDATE `tutoring_sessions` SET `teacher_name`='$NAME',`subject`='$SUBJECT',`duration`='$DURATION',`price`='$PRICE',`contact`='$CONTACT' WHERE id = '$ID' ");
-    header("location:meditatii.php");
+    header("location:../pages/meditatii.php");
 
 }
 ?>

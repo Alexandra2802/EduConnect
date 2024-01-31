@@ -1,9 +1,9 @@
-<?php include('server.php') ?>
+<?php include('../connection/server.php') ?>
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-    <title>Meditatii</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title>EduConnect</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
 
@@ -16,7 +16,7 @@
         <h2>CONT NOU</h2>
     </div>
 	<form method="post" action="register.php" name="form" >
-		<?php include('errors.php'); ?>
+		<?php include('../errors.php'); ?>
 		<div class="form-control">
 			<label>Nume de utilizator</label>
 			<input type="text"  name="username" value="<?php echo $username; ?>">
@@ -51,7 +51,7 @@
 
 		<div class="container">
             <div>
-                <input type="text" name="subject" id="search" placeholder="Materie" class=" live-search" >
+                <input type="text" name="subject" id="search" placeholder="Materie" class="live-search" >
             </div>
             <ul class="list-group" id="result">
 
@@ -83,8 +83,8 @@
 	</form>
 </div>
 <br><br><br><br><br><br><br><br><br>
-<script src="scripts/dynamicDropdown.js"></script>
-<script src="scripts/liveSearch.js"></script>
-<script src="scripts/login.js"></script>
+<script src="../scripts/dynamicDropdown.js"></script>
+<script src="../scripts/liveSearch.js"></script>
+<script src="../scripts/login.js"></script>
 </body>
 </html>

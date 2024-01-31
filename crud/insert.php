@@ -1,6 +1,6 @@
 <?php
 // include db connection
-include 'config.php';
+include '../connection/config.php';
 
 if(isset($_POST['upload'])){
     $NAME = $_POST['name'];
@@ -12,7 +12,7 @@ if(isset($_POST['upload'])){
     // insert data
     $SUBJECT = $_POST['subject'];
     mysqli_query($con,"INSERT INTO `tutoring_sessions`( `teacher_name`,`subject`,`duration`, `price`,`contact`) VALUES ('$NAME','$SUBJECT','$DURATION','$PRICE','$CONTACT')");
-    header("location:meditatii.php");
+    header("location:../pages/meditatii.php");
 
 }
 

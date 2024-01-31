@@ -4,7 +4,7 @@ let counties=[]
 const mainMenu=document.getElementById('main-menu')
 const subMenu=document.getElementById('sub-menu')
 
-fetch('./ro.json')
+fetch('ro.json')
     .then((response) => response.json())
     .then(
         (data) => {

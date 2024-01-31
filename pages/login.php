@@ -1,9 +1,9 @@
-<?php include('server.php') ?>
+<?php include('../connection/server.php') ?>
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-  <title>Meditatii</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <title>EduConnect</title>
+  <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
 
@@ -12,7 +12,7 @@
         <h2>LOGIN</h2>
     </div>
 	<form method="post" action="login.php" name="form" >
-		<?php include('errors.php'); ?>
+		<?php include('../connection/errors.php'); ?>
 		<div class="form-control">
 			<label>Nume de utilizator</label>
 			<input type="text"  name="username" value="<?php echo $username; ?>">
@@ -38,7 +38,7 @@
 		</p>
 	</form>
 </div>
-<script src="scripts/login.js"></script>
+<script src="../scripts/login.js"></script>
 
 </body>
 </html>

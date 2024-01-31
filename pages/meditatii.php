@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('../connection/server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,19 +9,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <style>
       input{
         margin: 10px;
       }
     </style>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
     <!-- j query cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="../img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,20 +33,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="styles/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../styles/style.css" rel="stylesheet">
   </head>
   <body>
     <header> 
       <ul class="navbar">
-        <li class="li-left"><a href="index.php"><img src="images/educonnect-high-resolution-logo-transparent.png" alt="logo"></a></li>
+        <li class="li-left"><a href="index.php"><img src="../images/educonnect-high-resolution-logo-transparent.png" alt="logo"></a></li>
          <li class="li-left"><a href="" style="cursor:default">Bine ai venit, <?php echo $_SESSION['username'] ?></a></li>
           <?php  if (isset($_SESSION['username'])) : ?>
             <li class="li-right"> <a href="index.php?logout='1'" data-hover="Logout" class="animated">Logout</a> </li>
@@ -63,7 +63,7 @@
     <br><br>
     <div class="center">
       <div class="main">
-        <form action="insert.php" method="POST" enctype="multipart/form-data" >
+        <form action="../crud/insert.php" method="POST" enctype="multipart/form-data" >
           <div class="input-container">
             <label for="name">NUME</label>
             <input type="text" name="name" class="table-input" id="name"><br>
@@ -99,7 +99,7 @@
           </thead>
           <tbody id="table-body">
             <?php
-              include 'config.php';
+              include '../connection/config.php';
               $pic = mysqli_query($con,"SELECT * FROM `tutoring_sessions`");
               while($row = mysqli_fetch_array($pic)){
               echo "
@@ -109,8 +109,8 @@
                       <td><br>$row[duration]</td>
                       <td><br>$row[price]</td>
                       <td><br>$row[contact]</td>
-                        <td><a href='delete.php?Id=$row[id]' class = 'btn table-btn'>Delete</a></td>
-                        <td><a href='update.php?Id=$row[id]' class = 'btn'>Update</a></td>
+                        <td><a href='../crud/delete.php?Id=$row[id]' class = 'btn table-btn'>Delete</a></td>
+                        <td><a href='updatePage.php?Id=$row[id]' class = 'btn'>Update</a></td>
                   </tr>
                   ";
               }
@@ -149,22 +149,22 @@
                     <h4 class="text-white mb-3">Gallery</h4>
                     <div class="row g-2 pt-2">
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="../img/course-1.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="../img/course-2.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="../img/course-3.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="../img/course-2.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="../img/course-3.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="../img/course-1.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -201,7 +201,7 @@
     </div>
     <!-- Footer End -->
 
-    <script src="scripts/sortByColumn.js"></script>
-    <script src="scripts/searchTable.js"></script>
+    <script src="../scripts/sortByColumn.js"></script>
+    <script src="../scripts/searchTable.js"></script>
   </body>
 </html>
