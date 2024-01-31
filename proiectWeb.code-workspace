@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "proiectWeb",
+			"path": "."
+		},
+		{
+			"name": "img",
+			"path": "../../../Users/alexa/Downloads/eLEARNING Free Website Template - Free-CSS.com/elearning-html-template/img"
+		},
+		{
+			"name": "css",
+			"path": "../../../Users/alexa/Downloads/eLEARNING Free Website Template - Free-CSS.com/elearning-html-template/css"
+		},
+		{
+			"name": "lib",
+			"path": "../../../Users/alexa/Downloads/eLEARNING Free Website Template - Free-CSS.com/elearning-html-template/lib"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}
