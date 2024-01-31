@@ -12,7 +12,8 @@
 - animated cards
 - dynamically loaded testimonials list
 
-![home_EduConnect](https://github.com/Alexandra2802/EduConnect/assets/76787341/298c77ad-0b57-4677-9a80-af068b010a86)
+![homepage_EduConnect](https://github.com/Alexandra2802/EduConnect/assets/76787341/5e2339e8-696d-48eb-8758-b4ed122ac6cf)
+
 
 ### Admin page
 - only visible to admin users
